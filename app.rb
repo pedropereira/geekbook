@@ -19,8 +19,8 @@ get '/' do
   @attendees      = Attendee.all(:order => 'geek_votes DESC')
   total_attendees = @attendees.count
 
-  random_number_left  = rand(total_attendees) # olha o zero!!
-  random_number_right = rand(total_attendees)
+  random_number_left  = rand(total_attendees - 1) + 1
+  random_number_right = rand(total_attendees - 1) + 1
 
   @attendee_left  = Attendee.find(random_number_left)
   @attendee_right = Attendee.find(random_number_right)
