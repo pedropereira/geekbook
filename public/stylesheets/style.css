@@ -1,0 +1,35 @@
+@font-face {
+	font-family: 'Aldrich';
+	src: url('/fonts/y0zwa9-hxl3_xvcxn-vxfa-webfont.eot');
+	src: url('/fonts/y0zwa9-hxl3_xvcxn-vxfa-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/y0zwa9-hxl3_xvcxn-vxfa-webfont.woff') format('woff'), url('/fonts/y0zwa9-hxl3_xvcxn-vxfa-webfont.ttf') format('truetype'), url('/fonts/y0zwa9-hxl3_xvcxn-vxfa-webfont.svg#AldrichRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body { background-image: url('/images/armyofbots.jpg'); font-family: 'Aldrich'; overflow-x: hidden; }
+
+a { color: #FFF; font-family: 'Aldrich'; text-decoration: none; }
+
+.title { color: #FFF; font-weight: bold; text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000; }
+h1.title { font-size: 34px; text-align: center; }
+h2.title { font-size: 20px; }
+
+div#wrapper { margin: auto; position: relative; width: 1200px; }
+
+div#logo { background-image: url('/images/logo.png'); height: 147px; margin: auto; width: 541px; }
+
+div#choices { height: 230px; margin: auto; width: 520px; text-align: center; }
+div#choices img { border: 1px solid #222; height: 200px; margin-bottom: 15px; width: 200px; }
+
+div#left-choice { background-color: #FFF; border-radius: 8px; float: left; height: 270px; padding: 20px; width: 200px; box-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000; }
+div#right-choice { background-color: #FFF; border-radius: 8px; float: right; height: 270px; padding: 20px; width: 200px; box-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000; }
+div#left-choice:hover,
+div#right-choice:hover { background-color: #FFB31A; }
+
+ol#ranking { color: #FFF; font-size: 15px; position: absolute; top: 120px; right: 0; text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000; width: 200px; }
+ol#ranking li.gold a { color: #c98910; }
+ol#ranking li.silver a { color: #a8a8a8; }
+ol#ranking li.bronze a { color: #965a38; }
+
+div#gb-logo { background-image: url('/images/gb_logo.png'); display: inline-block; height: 100px; margin: 20px 46% 0; opacity: 0.2; width: 100px; -webkit-transition: opacity 0.2s ease-in; -moz-transition: opacity 0.2s ease-in; -o-transition: opacity 0.2s ease-in; transition: opacity 0.2s ease-in; }
+div#gb-logo:hover { opacity: 0.6; }

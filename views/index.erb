@@ -1,0 +1,45 @@
+<script type="text/javascript">
+  $(document).ready(function($) {
+    $('div#left-choice').live('click', function() {
+      $.post('/attendees/vote',
+             { attendee_id: $('div#left-choice span').attr('id') },
+             function(){ $('div#right-choice').fadeOut(1000, function() { window.location = '/'; } );
+      });
+    });
+
+    $('div#right-choice').live('click', function() {
+      $.post('/attendees/vote',
+             { attendee_id: $('div#right-choice span').attr('id') },
+             function(){ $('div#left-choice').fadeOut(1000, function() { window.location = '/'; } );
+      });
+    });
+
+    $('ol#ranking li:nth-child(2)').addClass('gold');
+    $('ol#ranking li:nth-child(3)').addClass('silver');
+    $('ol#ranking li:nth-child(4)').addClass('bronze');
+  });
+</script>
+
+<h1 class="title">Who's geekiest?</h1>
+
+<div id="choices">
+  <div id="left-choice">
+    <img src="<%= @attendee_left.avatar_filename %>" />
+    <span id="<%= @attendee_left.id %>"><%= @attendee_left.name %></span>
+  </div>
+
+  <div id="right-choice">
+    <img src="<%= @attendee_right.avatar_filename %>" />
+    <span id="<%= @attendee_right.id %>"><%= @attendee_right.name %></span>
+  </div>
+</div>
+
+<ol id="ranking">
+  <h2 class="title">Ranking</h2>
+
+  <% @attendees.take(15).each do |attendee| %>
+    <li><a href="https://codebits.eu<%= attendee.profile_url %>"><%= attendee.name %></a></li>
+  <% end %>
+</ol>
+
+<a href="http://www.groupbuddies.com"><div id="gb-logo"></div></a>
